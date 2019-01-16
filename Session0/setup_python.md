@@ -4,7 +4,7 @@
 
 I highly recommend using "environments" for your coding and to create a special environment for this workshop. In particular, I recommend using Conda environments. If you are not familiar, Conda environments are basically directories that is a collection of specific versions of the software packages you are using. This is incredibly useful when working with different pieces of code that have different version requirements. I use a new environment for each project/analysis so that I don't have to worry about my old code breaking if I update a package. For example, when I switched to Python3, I kept my old Python2 setup in an environment so I can still run code that I have not yet updated to Python3 there. If you have questions about this, feel free to email me!
 
-I recommend just following the Conda environment instructions below, but if you know what you are doing, feel free to use your own environment manager. (For example, `pyenv`)
+I recommend just following the Conda environment instructions below, but if you know what you are doing, feel free to use your own favourite environment manager. (For example, `venv`)
 
 # Step 1: Install Anaconda and conda
 
