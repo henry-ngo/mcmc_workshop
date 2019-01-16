@@ -8,7 +8,9 @@ I recommend just following the Conda environment instructions below, but if you 
 
 # Step 1: Install Anaconda and conda
 
-Anaconda is a python distribution and package manager. [conda](https://conda.io/docs/index.html) is packaged with Anaconda and it is the software that manages environments and packages. There are many other ways to run python and manage all the packages so you can choose a different method but for this tutorial I will assume you are using conda with the Anaconda. Even if you already have python installed (e.g. by default on Mac or Linux) you can still install Anaconda without issues (actually better to not touch your base python installation).
+Anaconda is a python distribution and package manager. It is also super useful for scientists since it also inlcudes all of the main scientific python packages (SciPy, Numpy etc.). [conda](https://conda.io/docs/index.html) is also packaged with Anaconda and it is the software that manages environments and packages. 
+
+There are many other ways to run python and manage all the packages (e.g. Canopy) so you can choose a different method but for this tutorial I will assume you are using conda with Anaconda. Even if you already have python installed (e.g. by default on Mac or Linux) you can still install Anaconda without issues (actually better to not touch your base python installation).
 
 Follow the installation steps on the conda install page based on your operating system:
 
@@ -22,8 +24,37 @@ Note that the first step is to install Anaconda (since conda is packaged within 
 
 Also note that you do not need to do the "silent mode" install. That's for a special use case.
 
-## If you already installed Anaconda with Python2.7 and want to "upgrade" to Python3.7
-
-Come back later for this.
+**If you already installed Anaconda with Python2.7, it's not a problem. Python, it turns out, is just another package that conda can manage, so you will just have to specify Python3.7 when creating your new environment for this workshop and Python3.7 will be installed for the environment. See note below.**
 
 # Step 2: Create an environment for this workshop
+
+Here is the conda environment help page in case you get stuck: https://conda.io/docs/user-guide/tasks/manage-environments.html
+
+First, let's create a brand new environment for this workshop. At your terminal/command prompt, type
+```
+conda create --name emcee_workshop python=3.7
+```
+Say yes to the prompts. This will create a new environment named `emcee_workshop` using Python3.7. You can name it whatever you want, just replace `emcee_workshop` in the following lines with your name. Remember that this is a directory, and it has a location on your hard disk---within the `anaconda` installation directory (for me, it's `$HOME/anaconda`) there is now a new directory named `emcee_workshop/`.
+
+Next, switch your environment to your new `emcee_workshop` environment. On macOS or Linux, open the Terminal and type:
+```
+source activate emcee_workshop
+```
+On Windows, open the Anaconda Prompt and type:
+```
+activate emcee_workshop
+```
+
+Now, we are in this new environment. Let's set it up with all of the software you need for this workshop. Install the packages with:
+```
+conda install numpy scipy matplotlib
+```
+Say yes to the prompts. `numpy` and `scipy` are scientific python computing packages. `matplotlib` is a plotting package.
+
+`emcee` is not part of conda and has to be installed with pip. I recommend doing this after the conda installation with
+```
+pip install emcee
+```
+We're using emcee v2.2.1 for now. There is an upcoming update to emcee v3.0.
+
+Now you have all the packages you need installed! 
