@@ -3,7 +3,7 @@ Upcoming workshop dates:
 - Session 1: Friday Feb 8, 12:30-2:20pm, Clearihue C112
 - Session 2: Friday Feb 15, 12:30-2:20pm, Clearihue C112
 
-This is a hands-on workshop on Bayesian inference and MCMC (Markov Chain Monte Carlo) algorithms. All of the material will be posted here, including "Session 0", which is recommended review to be completed before the first session.
+This is a hands-on workshop on Bayesian inference and MCMC (Markov Chain Monte Carlo) algorithms. All of the material will be posted here, including ["Session 0"](./Session0), which is recommended review to be completed before the first session.
 
 [Click here to register: https://goo.gl/forms/cPfks6wnZRTmupGu2](https://goo.gl/forms/cPfks6wnZRTmupGu2)
 
