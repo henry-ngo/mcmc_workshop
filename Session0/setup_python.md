@@ -71,7 +71,7 @@ Later, just activate the environment again (see above) when you're working on th
 conda env list
 ```
 
-### Bonus: Interested in switching your default environment to Python3?
+## Bonus: Interested in switching your default environment to Python3?
 
 Here is a bonus in case you started with Python2 ages ago and now want to switch to Python3. This is not necessary for the workshop. We're not meant to do most of our computing in the default environment, but like many people, that's exactly what I did at first. Now, I create new environments for different analyses (which you can just specify python3 for as above) but sometimes it's handy to have a working set of scientific packages to do something quick or mess around with. So if you installed Anaconda with Python2 in the past and want to default to python3 when you start up a Terminal window, follow these steps. There are many ways to do this, here's my solution with macOS:
 
