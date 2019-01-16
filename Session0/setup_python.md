@@ -20,11 +20,11 @@ macOS: https://conda.io/docs/user-guide/install/macos.html
 
 Linux: https://conda.io/docs/user-guide/install/linux.html
 
-Note that the first step is to install Anaconda (since conda is packaged within Anaconda). Here, you will have the option between Python2.7 and Python3.7. If you don't know the difference, choose Python3.7. 2019 is the final year that many scientific python packages, including astronomy ones, will support Python2.7. In addition, `astropy`, a great python package (not part of this workshop though) has already dropped Python2 support. 
+Note that the first step is to install Anaconda (since conda is packaged within Anaconda). Here, you will have the option between Python2.7 and Python3.7. If you don't know the difference, choose Python3.7. 2019 is the final year that many scientific python packages, including astronomy ones, will support Python2.7. In addition, `astropy`, a great python package (not part of this workshop though) has already dropped Python2 support. See the end of this page for a bonus note on switching from Python2 to Python3.
 
 Also note that you do not need to do the "silent mode" install. That's for a special use case.
 
-**If you already installed Anaconda with Python2.7, it's not a problem. Python, it turns out, is just another package that conda can manage, so you will just have to specify Python3.7 when creating your new environment for this workshop and Python3.7 will be installed for the environment. See note below.**
+**If you already installed Anaconda with Python2.7, it's not a problem. Python, it turns out, is just another package that conda can manage, so you will just have to specify Python3.7 when creating your new environment for this workshop and Python3.7 will be installed for the environment. See below.**
 
 # Step 2: Create an environment for this workshop
 
@@ -45,7 +45,7 @@ On Windows, open the Anaconda Prompt and type:
 activate emcee_workshop
 ```
 
-Now, we are in this new environment. Let's set it up with all of the software you need for this workshop. Install the packages with:
+Now, we are in this new environment. Your command prompt is prepended with the environment name, which reminds you that you are in this environment. Let's set it up with all of the software you need for this workshop. Install the packages with:
 ```
 conda install numpy scipy matplotlib
 ```
@@ -57,4 +57,42 @@ pip install emcee
 ```
 We're using emcee v2.2.1 for now. There is an upcoming update to emcee v3.0.
 
-Now you have all the packages you need installed! 
+Now you have all the packages you need installed! You're still in this environment, so you can leave it and go back to your default or root environment. On macOS/Linux:
+```
+source deactivate
+```
+and on Windows:
+```
+deactivate
+```
+
+Later, just activate the environment again (see above) when you're working on the workshop. If you forget your environment names, you can see a list of all of them with:
+```
+conda env list
+```
+
+# Bonus: Interested in switching your default environment to Python3?
+
+Here is a bonus in case you started with Python2 ages ago and now want to switch to Python3. This is not necessary for the workshop. We're not meant to do most of our computing in the default environment, but like many people, that's exactly what I did at first. Now, I create new environments for different analyses (which you can just specify python3 for as above) but sometimes it's handy to have a working set of scientific packages to do something quick or mess around with. So if you installed Anaconda with Python2 in the past and want to default to python3 when you start up a Terminal window, follow these steps. There are many ways to do this, here's my solution with macOS:
+
+I started by creating a copy of my current default environment and naming the copied environment `py2`:
+```
+conda create --name py2 --clone root
+```
+(If you are not on macOS, the default environment may not be called `root`, so check with `conda env list`).
+
+This might take awhile if you have a lot of packages in that environment! If you'd like you could do `conda list` first while in the default environment to see what was installed and you can remove unneeded packages with `conda uninstall <pkg name>`.
+
+After this copy is made, create a new environment for python3, with a few basic packages installed
+```
+conda create --name py3 python=3 numpy scipy matplotlib pandas astropy
+```
+You can add whatever package names you want, these are just some that I find useful. After you create and switch to this environment, feel free to install more packages.
+
+The last step to automatically switch to this environment whenever you log into your machine or open Terminal. In `.bashrc` or whatever startup script you use, add
+```
+source activate py3
+```
+near the end so that you switch to this environment right away. 
+
+Finally, since you saved your old setup (Python2) in the `py2` environment, whenever you need to run the old Python2 code and don't want to deal with updating your code to Python3 (e.g. fixing those print statements), you can just switch to `py2`, run your old code, then switch back.
