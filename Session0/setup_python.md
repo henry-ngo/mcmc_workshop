@@ -18,7 +18,9 @@ macOS: https://conda.io/docs/user-guide/install/macos.html
 
 Linux: https://conda.io/docs/user-guide/install/linux.html
 
-Note that the first step is to install Anaconda (since conda is packaged within Anaconda). Here, you will have the option between Python2.7 and Python3.7. If you don't know the difference, choose Python3.7. 2019 is the final year that many scientific python packages, including astronomy ones, will support Python2.7. In addition, `astropy`, a great python package (not part of this workshop though) has already dropped Python2 support.
+Note that the first step is to install Anaconda (since conda is packaged within Anaconda). Here, you will have the option between Python2.7 and Python3.7. If you don't know the difference, choose Python3.7. 2019 is the final year that many scientific python packages, including astronomy ones, will support Python2.7. In addition, `astropy`, a great python package (not part of this workshop though) has already dropped Python2 support. 
+
+Also note that you do not need to do the "silent mode" install. That's for a special use case.
 
 ## If you already installed Anaconda with Python2.7 and want to "upgrade" to Python3.7
 
