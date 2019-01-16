@@ -9,7 +9,7 @@ This is a hands-on workshop on Bayesian inference and MCMC (Markov Chain Monte C
 
 Everyone is welcome! Open to students, postdocs, staff and faculty. 
 
-The overall goal of the workshop is to have everyone leave with an understanding of the basic concepts of Bayesian inference and specifically, how MCMC works. In particular, participants will leave with a working, ready-for-research implementation of the `emcee` python package, arguably the most popular MCMC package for astronomy.
+The overall goal of the workshop is to have everyone leave with an understanding of the basic concepts of Bayesian inference and specifically, how MCMC works. In particular, participants will leave with a working, ready-for-research implementation of the [`emcee`](https://emcee.readthedocs.io/en/stable/) python package, arguably the most popular MCMC package for astronomy.
 
 The plan of the two specific sessions are:
 - Session 1:  Introduction to Bayesian inference (vs. frequentist approaches), introduce the basic MCMC concepts. Implementing a basic MCMC solution to a simple fitting problem using the python package “emcee”.
