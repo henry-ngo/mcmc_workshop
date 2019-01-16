@@ -47,7 +47,7 @@ activate emcee_workshop
 
 Now, we are in this new environment. Your command prompt is prepended with the environment name, which reminds you that you are in this environment. Let's set it up with all of the software you need for this workshop. Install the packages with:
 ```
-conda install numpy scipy matplotlib
+conda install numpy scipy matplotlib jupyter
 ```
 Say yes to the prompts. `numpy` and `scipy` are scientific python computing packages. `matplotlib` is a plotting package.
 
@@ -85,7 +85,7 @@ This might take awhile if you have a lot of packages in that environment! If you
 
 After this copy is made, create a new environment for python3, with a few basic packages installed
 ```
-conda create --name py3 python=3 numpy scipy matplotlib pandas astropy
+conda create --name py3 python=3 numpy scipy matplotlib pandas astropy jupyter
 ```
 You can add whatever package names you want, these are just some that I find useful. After you create and switch to this environment, feel free to install more packages.
 
