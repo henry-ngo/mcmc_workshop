@@ -57,6 +57,11 @@ pip install emcee
 ```
 We're using emcee v2.2.1 for now. There is an upcoming update to emcee v3.0.
 
+Another useful package is `corner`, which also needs to be installed with pip. Run
+```
+pip install corner
+```
+
 Now you have all the packages you need installed! You're still in this environment, so you can leave it and go back to your default or root environment. On macOS/Linux:
 ```
 source deactivate
