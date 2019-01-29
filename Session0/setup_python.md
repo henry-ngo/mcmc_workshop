@@ -14,11 +14,11 @@ There are many other ways to run python and manage all the packages (e.g. Canopy
 
 Follow the installation steps on the conda install page based on your operating system:
 
-Windows: https://conda.io/docs/user-guide/install/windows.html
+Windows: https://conda.io/projects/conda/en/latest/user-guide/install/windows.html
 
-macOS: https://conda.io/docs/user-guide/install/macos.html
+macOS: https://conda.io/projects/conda/en/latest/user-guide/install/macos.html
 
-Linux: https://conda.io/docs/user-guide/install/linux.html
+Linux: https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
 
 Note that the first step is to install Anaconda (since conda is packaged within Anaconda). Here, you will have the option between Python2.7 and Python3.7. If you don't know the difference, choose Python3.7. 2019 is the final year that many scientific python packages, including astronomy ones, will support Python2.7. In addition, `astropy`, a great python package (not part of this workshop though) has already dropped Python2 support. See the end of this page for a bonus note on switching from Python2 to Python3.
 
